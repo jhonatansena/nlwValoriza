@@ -8,7 +8,7 @@ class CreateComplimentsController{
         
         const createComplimentsService = new CreateComplimentsService();
         
-        const compliment = createComplimentsService.execute({tag_id, user_sender, user_receiver, message});
+        const compliment = await createComplimentsService.execute({tag_id, user_sender, user_receiver, message});
 
         return response.json(compliment);
     }
